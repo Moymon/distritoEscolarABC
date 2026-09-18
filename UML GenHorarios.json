@@ -1,0 +1,250 @@
+{
+    "id": "f5f36845-03af-4ef2-ae0c-11d6c6f2494d",
+    "title": "UML GenHorarios",
+    "product": "lucidchart",
+    "pages": [
+        {
+            "id": "HWEp-vi-RSFO",
+            "title": "Clase UML",
+            "index": 0,
+            "items": {
+                "shapes": [
+                    {
+                        "id": "6ifm1e3bxjrP",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "Alumnos"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "id: integer: primaryKey\nclave: varchar (10)\ncorreo: varchar (50)\npassword: varchar(50)\nstatus: enum (active, inactive)\nsemestre_actual_id: integer foreingKey\ntimestamp: date"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": "+ login(clave/correo, password)\n+ register(clave, correo, password)\n+resetpassword(id, passowrd)"
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "U7PNEHNEvIEY",
+                        "class": "DefaultSquareBlock",
+                        "textAreas": [
+                            {
+                                "label": "Text",
+                                "text": "Distrito escolar ABC - Ejercicio de ORACLE Student"
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "U7PNwYMRwzRe",
+                        "class": "DefaultSquareBlock",
+                        "textAreas": [
+                            {
+                                "label": "Text",
+                                "text": "Moises Gonzalez Torres   "
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "5MtmEKqSJcoD",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "detailspersonalAlumnos"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "idDetail: integer primarykey\nalumnoId: integer foreingKey\nfecha_nac: date\nnombres: varchar (50)\napellidop: varchar (50)\napellidom: varchar (50)\nurl_foto: varchar (100)"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": "+ updateDetails()"
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "KkcvI.Byi3i~",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "alumno_semestre"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "idSemestre_alumno: integer primarykey\nidSemestre: integer foreingKey\nidAlumno: integer foreingKey"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": ""
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "4ncv~mHSeeNc",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "semestre"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "idSemestre: integer primarykey\nnumero: integer\nanio: integer\nnivel: integer\nnombre: varchar (50)"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": ""
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "ZqcvLRz526iO",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "contact_details"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "idContactD: integer primarykey\ndetailspId: integer foreingKey\ncelular: varchar (50)\ntelefono_casa: varchar (50)\ncolonia: varchar (100)\ncalle: varchar (100)\nnumero: varchar (5)\n"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": ""
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "LPsvuDKIk6aR",
+                        "class": "UMLClassBlock",
+                        "textAreas": [
+                            {
+                                "label": "Title",
+                                "text": "emergency_contact"
+                            },
+                            {
+                                "label": "Text1",
+                                "text": "idEmergencyC: integer primarykey\ncontactdId: integer foreingKey\nnombreTutor: varchar (50)\ntelefono: varchar (50)\ncelular: varchar (100)\ncorreo: varchar (100)\ncolonia: varchar (50)\ncalle: varchar (50)\nnumero: varchar (5)"
+                            },
+                            {
+                                "label": "Text2",
+                                "text": ""
+                            }
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    }
+                ],
+                "lines": [
+                    {
+                        "id": "zhcvz8JYrjbg",
+                        "endpoint1": {
+                            "style": "None",
+                            "connectedTo": "5MtmEKqSJcoD"
+                        },
+                        "endpoint2": {
+                            "style": "Arrow",
+                            "connectedTo": "6ifm1e3bxjrP"
+                        },
+                        "textAreas": [],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "YncvIObwEjia",
+                        "endpoint1": {
+                            "style": "None",
+                            "connectedTo": "KkcvI.Byi3i~"
+                        },
+                        "endpoint2": {
+                            "style": "Arrow",
+                            "connectedTo": "6ifm1e3bxjrP"
+                        },
+                        "textAreas": [],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "aqcvXtXlEC.L",
+                        "endpoint1": {
+                            "style": "None",
+                            "connectedTo": "KkcvI.Byi3i~"
+                        },
+                        "endpoint2": {
+                            "style": "Arrow",
+                            "connectedTo": "4ncv~mHSeeNc"
+                        },
+                        "textAreas": [],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "fOsvJtdOB-ft",
+                        "endpoint1": {
+                            "style": "None",
+                            "connectedTo": "ZqcvLRz526iO"
+                        },
+                        "endpoint2": {
+                            "style": "Arrow",
+                            "connectedTo": "5MtmEKqSJcoD"
+                        },
+                        "textAreas": [],
+                        "customData": [],
+                        "linkedData": []
+                    },
+                    {
+                        "id": "4Zsv38QYMZYp",
+                        "endpoint1": {
+                            "style": "None",
+                            "connectedTo": "LPsvuDKIk6aR"
+                        },
+                        "endpoint2": {
+                            "style": "Arrow",
+                            "connectedTo": "ZqcvLRz526iO"
+                        },
+                        "textAreas": [],
+                        "customData": [],
+                        "linkedData": []
+                    }
+                ],
+                "groups": [
+                    {
+                        "id": "U7PNBIunbVQL",
+                        "members": [
+                            "U7PNEHNEvIEY",
+                            "U7PNwYMRwzRe"
+                        ],
+                        "customData": [],
+                        "linkedData": []
+                    }
+                ],
+                "layers": []
+            },
+            "customData": [],
+            "linkedData": []
+        }
+    ],
+    "data": {
+        "collections": []
+    },
+    "accountId": 136307298
+}
